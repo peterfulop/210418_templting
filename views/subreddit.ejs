@@ -1,0 +1,27 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/navbar') %>
+
+        <%- include('partials/content') %>
+
+
+            <h2>Browsing the <%= name %> subreddit.</h2>
+            <h3>
+                <%= description %>
+            </h3>
+            <hr>
+            <p>
+                <%= subscribers %> Total subscribers
+            </p>
+            <% for(let post of posts){ %>
+                <p>
+                    <%=post.title %>
+                        <b>
+                            - <%= post.author %>
+                        </b>
+                </p>
+                <hr>
+                <% } %>
+
+
+                    <%- include('partials/footer') %>
